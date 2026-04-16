@@ -4799,8 +4799,8 @@ evodata SPECIES_STARAPTOR
     terminateevodata
 
 evodata SPECIES_BIDOOF
-    evolution EVO_LEVEL, 15, SPECIES_BIBAREL
-    evolution EVO_NONE, 0, SPECIES_NONE
+    evolution EVO_STONE, ITEM_WATER_STONE, SPECIES_BIBAREL
+    evolution EVO_LEVEL, 100, SPECIES_ARCEUS
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE
     evolution EVO_NONE, 0, SPECIES_NONE

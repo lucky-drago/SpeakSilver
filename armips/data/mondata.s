@@ -8408,7 +8408,7 @@ mondata SPECIES_BIDOOF, "Bidoof"
     abilities ABILITY_SIMPLE, ABILITY_UNAWARE
     runchance 0
     colorflip BODY_COLOR_BROWN, 0
-    mondexentry SPECIES_BIDOOF, "It lives in groups by the water. \nIt chews up boulders and trees\naround its nest with its incisors."
+    mondexentry SPECIES_BIDOOF, "It lives in groups by the water. \nIt's widely considered a\ndeity in many parts of the world."
     mondexclassification SPECIES_BIDOOF, "Plump Mouse Pokémon"
     mondexheight SPECIES_BIDOOF, "1’08”"
     mondexweight SPECIES_BIDOOF, "44.1 lbs."
