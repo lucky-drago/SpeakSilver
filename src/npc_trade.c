@@ -41,7 +41,7 @@ void LONG_CALL _CreateTradeMon(struct PartyPokemon *mon, struct NPCTrade *trade_
 
     SetMonData(mon, MON_DATA_MET_GENDER, &trade_dat->gender);
     SetMonData(mon, MON_DATA_GAME_LANGUAGE, &trade_dat->language);
-
+    
     mapsec = MapHeader_GetMapSec(mapno);
     MonSetTrainerMemo(mon, NULL, met_level_strat, mapsec, heapId);
 
