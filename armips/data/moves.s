@@ -11180,7 +11180,11 @@ movedata MOVE_AURORA_VEIL, "Aurora Veil"
     appeal 0x00
     contesttype CONTEST_BEAUTY
     terminatedata
-    movedescription MOVE_AURORA_VEIL, "This move reduces damage\nfrom most moves for five\nturns. It can be used\nonly in a hailstorm or\nwhen it is snowing."
+.if SNOW_WARNING_GENERATION >= 9
+    movedescription MOVE_AURORA_VEIL, "This move reduces damage\nfrom most moves for five\nturns. It can be used\nonly when it is snowing."
+.else
+    movedescription MOVE_AURORA_VEIL, "This move reduces damage\nfrom most moves for five\nturns. It can be used\nonly in a hailstorm."
+.endif
 
 movedatalongname MOVE_SINISTER_ARROW_RAID, "Sinister Raid", "Sinister Arrow Raid"
     battleeffect MOVE_EFFECT_HIT
@@ -13006,7 +13010,7 @@ movedata MOVE_LASH_OUT, "Lash Out"
     appeal 0x00
     contesttype CONTEST_COOL
     terminatedata
-    movedescription MOVE_LASH_OUT, "The user vents its\nfrustration. Its power\nis doubled if the user's\nstats were lowered\nduring this turn."
+    movedescription MOVE_LASH_OUT, "The user vents its\nfrustration. Its power is\ndoubled if the user's\nstats were lowered\nduring this turn."
 
 movedata MOVE_POLTERGEIST, "Poltergeist"
     battleeffect MOVE_EFFECT_POLTERGEIST
