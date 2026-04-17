@@ -799,9 +799,6 @@ Encounter_New = 0x020506BC | 1;
 TaskManager_Call = 0x02050530 | 1;
 Task_TutorialBattle = 0x0205128C | 1;
 
-<<<<<<< HEAD
-GetItemAttrSub = 0x02077E48 | 1;
-=======
 GetItemAttrSub = 0x02077E48 | 1;
 
 gSystem = 0x021D110C;
@@ -846,4 +843,3 @@ sBattleBgProfileTable = 0x0226E70C;
 UpdateFriendshipFainted = 0x02248558 | 1;
 
 StringExpandPlaceholders = 0x0200CBBC | 1;
->>>>>>> upstream/main
