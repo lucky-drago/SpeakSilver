@@ -287,8 +287,8 @@ trainerdata 9, "Elaine"
         // mon 0
         ivs 0
         abilityslot 32
-        level 21
-        pokemon SPECIES_STARYU
+        level 28
+        pokemon SPECIES_TATSUGIRI
         ballseal 0
     endparty
 
@@ -308,14 +308,14 @@ trainerdata 10, "Amy & Mimi"
         // mon 0
         ivs 10
         abilityslot 32
-        level 10
+        level 15
         pokemon SPECIES_SPINARAK
         ballseal 0
 
         // mon 1
         ivs 10
         abilityslot 32
-        level 10
+        level 15
         pokemon SPECIES_LEDYBA
         ballseal 0
     endparty
@@ -336,22 +336,22 @@ trainerdata 11, "Mickey"
         // mon 0
         ivs 0
         abilityslot 0
-        level 20
-        pokemon SPECIES_SKIPLOOM
+        level 24
+        pokemon SPECIES_SKIDDO
         ballseal 0
 
         // mon 1
         ivs 0
         abilityslot 0
-        level 20
+        level 25
         pokemon SPECIES_VULPIX
         ballseal 0
 
         // mon 2
         ivs 0
         abilityslot 0
-        level 18
-        pokemon SPECIES_SKIPLOOM
+        level 23
+        pokemon SPECIES_DUSTOX
         ballseal 0
     endparty
 
@@ -371,22 +371,22 @@ trainerdata 12, "Grunt"
         // mon 0
         ivs 30
         abilityslot 32
-        level 7
+        level 14
         pokemon SPECIES_RATTATA
         ballseal 0
 
         // mon 1
         ivs 30
         abilityslot 0
-        level 9
-        pokemon SPECIES_ZUBAT
+        level 15
+        pokemon SPECIES_WOOBAT
         ballseal 0
 
         // mon 2
         ivs 30
         abilityslot 0
         level 9
-        pokemon SPECIES_ZUBAT
+        pokemon SPECIES_MUK
         ballseal 0
     endparty
 

@@ -37453,7 +37453,7 @@ const ITEMDATA __data[] =
 
 [ITEM_DREAM_BALL] =
 {
-    ITEM_PRICE(0),
+    ITEM_PRICE(10000),
     .holdEffect = 0,
     .holdEffectParam = 0,
     .pluckEffect = 0,
@@ -55328,7 +55328,7 @@ const ITEMDATA __data[] =
 
 [ITEM_BEAST_BALL] =
 {
-    ITEM_PRICE(0),
+    ITEM_PRICE(10000),
     .holdEffect = 0,
     .holdEffectParam = 0,
     .pluckEffect = 0,

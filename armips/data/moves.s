@@ -93,7 +93,7 @@ movedata MOVE_COMET_PUNCH, "Comet Punch"
 movedata MOVE_MEGA_PUNCH, "Mega Punch"
     battleeffect MOVE_EFFECT_HIT
     pss SPLIT_PHYSICAL
-    basepower 80
+    basepower 85
     type TYPE_NORMAL
     accuracy 85
     pp 20
@@ -2653,7 +2653,7 @@ movedata MOVE_SUBSTITUTE, "Substitute"
 movedata MOVE_STRUGGLE, "Struggle"
     battleeffect MOVE_EFFECT_STRUGGLE
     pss SPLIT_PHYSICAL
-    basepower 50
+    basepower 100
     type TYPE_NORMAL
     accuracy 0
     pp 1
@@ -14267,8 +14267,8 @@ movedata MOVE_HYPER_DRILL, "Hyper Drill"
     pss SPLIT_PHYSICAL
     basepower 100
     type TYPE_NORMAL
-    accuracy 100
-    pp 5
+    accuracy 120
+    pp 10
     effectchance 0
     target RANGE_SINGLE_TARGET
     priority 0
