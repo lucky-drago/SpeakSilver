@@ -14249,7 +14249,7 @@ const ITEMDATA __data[] =
 [ITEM_MENTAL_HERB] =
 {
     ITEM_PRICE(10000),
-    .holdEffect = HOLD_EFFECT_HEAL_INFATUATION,
+    .holdEffect = HOLD_EFFECT_HEAL_MENTAL_CONDITIONS,
     .holdEffectParam = 0,
     .pluckEffect = 0,
     .flingEffect = 25,
@@ -83095,7 +83095,7 @@ const ITEMDATA __data[] =
     .selectable = FALSE,
     .fieldPocket = POCKET_KEY_ITEMS,
     .battlePocket = BATTLE_POCKET_NONE,
-    .fieldUseFunc = 0,
+    .fieldUseFunc = 35,
     .battleUseFunc = 0,
     .partyUse = 0,
     .partyUseParam = {

@@ -27,7 +27,7 @@
 //#define DEBUG_PRINT_OVERLAY_LOADS
 
 // DEBUG_SOUND_SSEQ_LOADS prints out sseq loads from the SDAT and the free space left after the load.
-//#define DEBUG_SOUND_SSEQ_LOADS
+#define DEBUG_SOUND_SSEQ_LOADS
 
 // DEBUG_SOUND_SBNK_LOADS prints out sseq loads from the SDAT and the free space left after the load.
 //#define DEBUG_SOUND_SBNK_LOADS
@@ -62,11 +62,17 @@
 // DEBUG_ALWAYS_OBEY will force all battlers to obey regardless of badges owned
 //#define DEBUG_ALWAYS_OBEY
 
+// DEBUG_SWITCH_IN_ABILITY_CHECK turns on a number of debug prints related to the switch-in logic
+// #define DEBUG_SWITCH_IN_ABILITY_CHECK
+
 // DEBUG_ENDTURN_LOGIC turns on a number of debug prints related to the end-turn logic
 //#define DEBUG_ENDTURN_LOGIC
 
 // DEBUG_BEFORE_MOVE_LOGIC turns on a number of debug prints related to the before-move logic
 //#define DEBUG_BEFORE_MOVE_LOGIC
+
+// DEBUG_MOVE_PERFORMANCE_LOGIC turns on a number of debug prints related to the move-performance logic
+// #define DEBUG_MOVE_PERFORMANCE_LOGIC
 
 // DEBUG_PRINT_HEAP_CREATION allows for debug prints on heap creation/deletion
 //#define DEBUG_PRINT_HEAP_CREATION
@@ -79,6 +85,9 @@
 
 //DEBUG_SPEED_CALC shows debug information related to calculating speed. It is very slow and laggy.
 // #define DEBUG_SPEED_CALC
+
+// DEBUG_ABILITY_POPUP shows debug information related to the Ability popup.
+//#define DEBUG_ABILITY_POPUP
 
 // FANCY_PRINT_NICKNAME defines in progress implementations that may not necessarily function.
 // #define FANCY_PRINT_NICKNAME
@@ -100,6 +109,6 @@
 //#define DEBUG_AUTO_CONTINUE_GAME
 
 // NOCASH_GBA_PRINT swaps from desmume prints with the syscall to NO$GBA-style prints for use with i.e. melonDS
-#define NOCASH_GBA_PRINT
+//#define NOCASH_GBA_PRINT
 
 #endif // DEBUG_H
