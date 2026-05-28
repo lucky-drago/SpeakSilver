@@ -409,7 +409,7 @@ arm9 0204B94C FC
 0012 0224655C FC
 0012 02246560 FC
 
-# MainMusicComboTable combo range
+# MainComboTable combo range
 arm9 080517AA 2D
 arm9 080517D4 2D
 
@@ -417,7 +417,7 @@ arm9 080517D4 2D
 arm9 08051886 20
 
 # PokemonBattleMusic table range
-arm9 080518CA 0B
+arm9 080518CA 36
 
 # sTrainerEncounterMusicParam table range
 arm9 080550D4 2C

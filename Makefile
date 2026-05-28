@@ -1,6 +1,6 @@
 # Makefile
 
-ROMNAME = hg_base.nds
+ROMNAME = rom.nds
 BUILDROM = musicNWAV.nds
 
 define n

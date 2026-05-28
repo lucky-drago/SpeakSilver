@@ -5631,7 +5631,7 @@ rocksmashrate 0
 oldrodrate 0
 goodrodrate 0
 superrodrate 0
-walklevels 30, 30, 30, 31, 32, 32, 32, 32, 33, 34, 28, 30
+walklevels 50, 60, 50, 41, 52, 62, 52, 62, 63, 54, 68, 60
 
 // morning encounter slots
 pokemon SPECIES_SIGILYPH
