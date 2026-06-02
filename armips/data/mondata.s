@@ -205,7 +205,7 @@ mondata SPECIES_WARTORTLE, "Wartortle"
 
 mondata SPECIES_BLASTOISE, "Blastoise"
     basestats 79, 83, 100, 78, 85, 105
-    types TYPE_WATER, TYPE_WATER
+    types TYPE_WATER, TYPE_STEEL
     catchrate 45
     baseexp 0 // defined in baseexp.s
     evyields 0, 0, 0, 0, 0, 3
@@ -3816,7 +3816,7 @@ mondata SPECIES_FLAAFFY, "Flaaffy"
 
 
 mondata SPECIES_AMPHAROS, "Ampharos"
-    basestats 90, 75, 85, 55, 115, 90
+    basestats 100, 75, 85, 75, 115, 105
     types TYPE_ELECTRIC, TYPE_ELECTRIC
     catchrate 45
     baseexp 0 // defined in baseexp.s
@@ -8520,7 +8520,7 @@ mondata SPECIES_LUXIO, "Luxio"
 
 
 mondata SPECIES_LUXRAY, "Luxray"
-    basestats 80, 120, 79, 70, 95, 79
+    basestats 80, 120, 79, 90, 95, 79
     types TYPE_ELECTRIC, TYPE_ELECTRIC
     catchrate 45
     baseexp 0 // defined in baseexp.s
@@ -12962,7 +12962,7 @@ mondata SPECIES_ARCHEN, "Archen"
     basefriendship 50
     growthrate GROWTH_MEDIUM_FAST
     egggroups EGG_GROUP_FLYING, EGG_GROUP_WATER_3
-    abilities ABILITY_DEFEATIST, ABILITY_NONE
+    abilities ABILITY_CLOUD_NINE, ABILITY_NONE
     runchance 0
     colorflip BODY_COLOR_YELLOW, 0
     mondexentry SPECIES_ARCHEN, "It was revived from an ancient fossil.\nNot able to fly, it lived in treetops\nand hopped from one branch to another."
@@ -12983,7 +12983,7 @@ mondata SPECIES_ARCHEOPS, "Archeops"
     basefriendship 50
     growthrate GROWTH_MEDIUM_FAST
     egggroups EGG_GROUP_FLYING, EGG_GROUP_WATER_3
-    abilities ABILITY_DEFEATIST, ABILITY_NONE
+    abilities ABILITY_CLOUD_NINE, ABILITY_STAMINA
     runchance 0
     colorflip BODY_COLOR_YELLOW, 0
     mondexentry SPECIES_ARCHEOPS, "It runs better than it flies.\nIt takes off into the sky by\nrunning at a speed of 25 mph."
@@ -22660,7 +22660,7 @@ mondata SPECIES_MEGA_CHARIZARD_Y, "-----"
 
 mondata SPECIES_MEGA_BLASTOISE, "-----"
     basestats 79, 103, 120, 78, 135, 115
-    types TYPE_WATER, TYPE_WATER
+    types TYPE_WATER, TYPE_STEEL
     catchrate 45
     baseexp 210
     evyields 0, 0, 0, 0, 0, 3
@@ -22851,7 +22851,7 @@ mondata SPECIES_MEGA_MEWTWO_Y, "-----"
     colorflip 0, 0
 
 mondata SPECIES_MEGA_AMPHAROS, "-----"
-    basestats 90, 95, 105, 45, 165, 110
+    basestats 100, 95, 105, 45, 165, 110
     types TYPE_ELECTRIC, TYPE_DRAGON
     catchrate 45
     baseexp 194
@@ -26163,8 +26163,8 @@ mondata SPECIES_NECROZMA_DAWN_WINGS, "-----"
     colorflip BODY_COLOR_BLUE, 1
 
 mondata SPECIES_NECROZMA_ULTRA_DUSK_MANE, "-----"
-    basestats 97, 167, 97, 129, 167, 97
-    types TYPE_PSYCHIC, TYPE_DRAGON
+    basestats 145, 250, 145, 193, 250, 145
+    types TYPE_FAIRY, TYPE_DRAGON
     catchrate 255
     baseexp 339
     evyields 0, 1, 0, 1, 1, 0
@@ -26179,8 +26179,8 @@ mondata SPECIES_NECROZMA_ULTRA_DUSK_MANE, "-----"
     colorflip BODY_COLOR_YELLOW, 1
 
 mondata SPECIES_NECROZMA_ULTRA_DAWN_WINGS, "-----"
-    basestats 97, 167, 97, 129, 167, 97
-    types TYPE_PSYCHIC, TYPE_DRAGON
+    basestats 145, 250, 145, 193, 250, 145
+    types TYPE_FAIRY, TYPE_DRAGON
     catchrate 255
     baseexp 339
     evyields 0, 1, 0, 1, 1, 0

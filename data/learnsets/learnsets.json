@@ -31978,12 +31978,20 @@
         "Move": "MOVE_THUNDER_WAVE"
       },
       {
+        "Level": 6,
+        "Move": "MOVE_SWEET_KISS"
+      },
+      {
         "Level": 8,
         "Move": "MOVE_THUNDER_SHOCK"
       },
       {
         "Level": 11,
         "Move": "MOVE_COTTON_SPORE"
+      },
+      {
+        "Level": 14,
+        "Move": "MOVE_CHATTER"
       },
       {
         "Level": 15,
@@ -32130,12 +32138,20 @@
         "Move": "MOVE_THUNDER_SHOCK"
       },
       {
+        "Level": 8,
+        "Move": "MOVE_SWEET_KISS"
+      },
+      {
         "Level": 9,
         "Move": "MOVE_THUNDER_WAVE"
       },
       {
         "Level": 11,
         "Move": "MOVE_COTTON_SPORE"
+      },
+      {
+        "Level": 14,
+        "Move": "MOVE_CHATTER"
       },
       {
         "Level": 16,
@@ -32326,8 +32342,16 @@
         "Move": "MOVE_ZAP_CANNON"
       },
       {
+        "Level": 6,
+        "Move": "MOVE_SWEET_KISS"
+      },
+      {
         "Level": 11,
         "Move": "MOVE_COTTON_SPORE"
+      },
+      {
+        "Level": 14,
+        "Move": "MOVE_CHATTER"
       },
       {
         "Level": 16,
@@ -32346,8 +32370,16 @@
         "Move": "MOVE_CONFUSE_RAY"
       },
       {
-        "Level": 35,
-        "Move": "MOVE_POWER_GEM"
+        "Level": 32,
+        "Move": "MOVE_THUNDERBOLT"
+      },
+      {
+        "Level": 34,
+        "Move": "MOVE_ICE_PUNCH"
+      },
+      {
+        "Level": 37,
+        "Move": "MOVE_DRAGON_PULSE"
       },
       {
         "Level": 40,
@@ -32355,18 +32387,18 @@
       },
       {
         "Level": 46,
-        "Move": "MOVE_COTTON_GUARD"
+        "Move": "MOVE_DRAGON_DANCE"
       },
       {
         "Level": 51,
         "Move": "MOVE_DAZZLING_GLEAM"
       },
       {
-        "Level": 57,
+        "Level": 53,
         "Move": "MOVE_LIGHT_SCREEN"
       },
       {
-        "Level": 62,
+        "Level": 56,
         "Move": "MOVE_THUNDER"
       }
     ],
@@ -45805,6 +45837,10 @@
         "Move": "MOVE_BULK_UP"
       },
       {
+        "Level": 44,
+        "Move": "MOVE_HIGH_JUMP_KICK"
+      },
+      {
         "Level": 49,
         "Move": "MOVE_REVERSAL"
       },
@@ -45864,6 +45900,7 @@
       "MOVE_HEAT_WAVE",
       "MOVE_HELPING_HAND",
       "MOVE_HIDDEN_POWER",
+      "MOVE_HIGH_JUMP_KICK",
       "MOVE_HONE_CLAWS",
       "MOVE_HYPER_BEAM",
       "MOVE_INCINERATE",
@@ -108472,6 +108509,10 @@
       {
         "Level": 21,
         "Move": "MOVE_TEETER_DANCE"
+      },
+      {
+        "Level": 23,
+        "Move": "MOVE_CHATTER"
       },
       {
         "Level": 26,
