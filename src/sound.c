@@ -74,9 +74,12 @@ void LONG_CALL NNS_SndPlayerPauseByPlayerNo_Hook(u8 playerID, BOOL paused)
 void LONG_CALL NNS_SndPlayerStopSeqByPlayerNo_Hook(u8 playerID, int fadeFrame)
 {
     NNS_SndPlayerStopSeqByPlayerNo_Original(playerID, fadeFrame);
-    //debug_printf("Stop seq for p %d with fframe %d.\n", playerID, fadeFrame);
-    if(playerID == 9 && fadeFrame > 0){
-        NWAVPlayer_stop(fadeFrame);
+
+    if (playerID == 0 || playerID == 1 || playerID == 9) {
+        if (current_is_nwav) {
+            NWAVPlayer_stop(fadeFrame);
+        }
+
         current_seq = 0xFFFF;
         current_is_nwav = FALSE;
     }

@@ -26164,7 +26164,7 @@ mondata SPECIES_NECROZMA_DAWN_WINGS, "-----"
 
 mondata SPECIES_NECROZMA_ULTRA_DUSK_MANE, "-----"
     basestats 145, 250, 145, 193, 250, 145
-    types TYPE_FAIRY, TYPE_DRAGON
+    types TYPE_STEEL, TYPE_DRAGON
     catchrate 255
     baseexp 339
     evyields 0, 1, 0, 1, 1, 0
@@ -26180,7 +26180,7 @@ mondata SPECIES_NECROZMA_ULTRA_DUSK_MANE, "-----"
 
 mondata SPECIES_NECROZMA_ULTRA_DAWN_WINGS, "-----"
     basestats 145, 250, 145, 193, 250, 145
-    types TYPE_FAIRY, TYPE_DRAGON
+    types TYPE_STEEL, TYPE_DRAGON
     catchrate 255
     baseexp 339
     evyields 0, 1, 0, 1, 1, 0
