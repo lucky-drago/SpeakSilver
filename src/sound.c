@@ -26,12 +26,14 @@ static const NWAV_Override sNwavOverrides[] = {
 
 
 void LONG_CALL NNS_SndInit_Hook(void){
+    debug_printf("");
     firstWavID = 533;
     NNS_SndInit_Original();
     NWAVPlayer_init();
 }
 
 void LONG_CALL NNS_SndMain_Hook(void){
+    debug_printf("");
     NNS_SndMain_Original();
     NWAVPlayer_updateFade();
 }
@@ -48,6 +50,7 @@ void LONG_CALL NNS_SndPlayerSetTempoRatio_Hook(int handle, int tempo){
 
 void LONG_CALL GF_SndHandleMoveVolume_Hook(int param1, int volume, int frames)
 {
+    debug_printf("");
     GF_SndHandleMoveVolume_Original(param1, volume, frames);
     //debug_printf("[GF_SndHandleMoveVolume_Hook] Handling move volume with params: %d, %d, %d.\n", param1, volume, frames);
     //param 1 could be the player ID? only update volume for bgm, not cries or sfx
@@ -62,6 +65,7 @@ void LONG_CALL GF_SndHandleMoveVolume_Hook(int param1, int volume, int frames)
 
 void LONG_CALL NNS_SndPlayerPauseByPlayerNo_Hook(u8 playerID, BOOL paused)
 {
+    debug_printf("");
     NNS_SndPlayerPauseByPlayerNo_Original(playerID, paused);
     //debug_printf("Setting pause for player %d to %d.\n", playerID, paused);
     
@@ -73,6 +77,7 @@ void LONG_CALL NNS_SndPlayerPauseByPlayerNo_Hook(u8 playerID, BOOL paused)
 
 void LONG_CALL NNS_SndPlayerStopSeqByPlayerNo_Hook(u8 playerID, int fadeFrame)
 {
+    debug_printf("");
     NNS_SndPlayerStopSeqByPlayerNo_Original(playerID, fadeFrame);
 
     if (playerID == 0 || playerID == 1 || playerID == 9) {
@@ -88,6 +93,7 @@ void LONG_CALL NNS_SndPlayerStopSeqByPlayerNo_Hook(u8 playerID, int fadeFrame)
 
 static BOOL GetIfSequenced(int seqID)
 {
+    debug_printf("");
     int wavID = firstWavID + seqID; //firstWavID is the index in NWAVPlayer.h
     FSFile file;
     FS_InitFile(&file);
@@ -113,6 +119,7 @@ static BOOL GetIfSequenced(int seqID)
 //replace the play function
 void LONG_CALL PlayBGM_Hook(u16 seqno)
 {
+    debug_printf("");
     if (current_seq == seqno) {
         return; 
     }
@@ -180,6 +187,7 @@ void LONG_CALL PlayBGM_Hook(u16 seqno)
 }
 
 BOOL LONG_CALL GF_Snd_LoadSeq(int seqNo) {
+    debug_printf("");
     BOOL ret;
     struct SND_WORK *work;
     if (TRUE)//GetIfSequenced(seqNo)) 
@@ -210,6 +218,7 @@ BOOL LONG_CALL GF_Snd_LoadSeq(int seqNo) {
 
 
 BOOL GF_Snd_LoadSeqEx(int seqNo, u32 loadFlag) {
+    debug_printf("");
     BOOL ret;
     struct SND_WORK *work;
 
@@ -257,6 +266,7 @@ const u8 *NNS_SND_ARC_LOAD_ERROR_STRINGS[] =
 
 int LONG_CALL NNSi_SndArcLoadBank(int bankNo, u32 loadFlag, void *heap, BOOL bSetAddr, struct SNDBankData** pData)
 {
+    debug_printf("");
     const NNSSndArcBankInfo* bankInfo;
     const NNSSndArcWaveArcInfo* waveArcInfo;
     SNDBankData* bank = NULL;

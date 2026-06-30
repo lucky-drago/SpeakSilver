@@ -145,6 +145,7 @@ static void StrmThread(void* arg);
 //Goes to a certain position in the file, either based on byte index or music sample.
 static void seek(int pos, BOOL sample)
 {
+    debug_printf("");
     if (sample)
     {
         //Calculate file absolute file position.
@@ -166,6 +167,7 @@ static void seek(int pos, BOOL sample)
 //Use this before playing or resuming music. (Keeps buffer aligned and makes it update instantly)
 static void prepareBuffer(void)
 {
+    debug_printf("");
     sInfo.bufPage = 0;
     update(&sInfo);
     update(&sInfo);
@@ -177,6 +179,7 @@ BOOL NWAVPlayer_getPaused(void) { return sInfo.isPaused; }
 //Sets if the music is paused by stopping or starting the timers.
 void NWAVPlayer_setPaused(BOOL paused)
 {
+    debug_printf("");
     //If music is playing and stopped flag isn't the one already set.
     if (sInfo.isPlaying && sInfo.isPaused != paused)
     {
@@ -199,6 +202,7 @@ int NWAVPlayer_getVolume(void) { return sInfo.volume; }
 //Sets the volume by shifting it during the specified frame period.
 void NWAVPlayer_setVolume(int volume, int frames)
 {
+    debug_printf("");
     //Do nothing if volume doesn't change.
     if (sInfo.volume == volume)
         return;
@@ -222,6 +226,7 @@ void NWAVPlayer_setVolume(int volume, int frames)
 //Stops the music. (For internal use ONLY)
 static void stop_internal(int frames, BOOL waitForUpdate)
 {
+    debug_printf("");
     //Do nothing if not playing.
     if (!sInfo.isPlaying)
         return;
@@ -264,6 +269,7 @@ static void stop_internal(int frames, BOOL waitForUpdate)
 //Stops the music. (For external use ONLY)
 void NWAVPlayer_stop(int frames)
 {
+    debug_printf("");
     stop_internal(frames, FALSE);
 }
 
@@ -291,6 +297,7 @@ static void updateEvents(StreamInfo* sInfo)
 //Updates the music fading.
 BOOL NWAVPlayer_updateFade(void)
 {
+    debug_printf("");
     if (sInfo.isPlaying && sInfo.fadeFrame)
     {
         int newVolume = sInfo.volume - sInfo.fadeDec;
@@ -315,6 +322,7 @@ BOOL NWAVPlayer_updateFade(void)
 //Checks if the music has reached end or loop point and updates the music state accordingly.
 static void updateCheckEnd(StreamInfo* sInfo, int len, u32 offset)
 {
+    debug_printf("");
     int leftOver = STRM_BUF_PAGESIZE - len;
     if (sInfo->loops)
     {
@@ -370,6 +378,7 @@ static void updateCheckEnd(StreamInfo* sInfo, int len, u32 offset)
 //Updates the music.
 static void update(StreamInfo* sInfo)
 {
+    debug_printf("");
     //Check for delayed stop.
     if (sInfo->stopMode == 2)
     {
@@ -434,6 +443,7 @@ static void update(StreamInfo* sInfo)
 //The sound alarm function that unblocks the thread.
 static void SoundAlarmHandler(void* arg)
 {
+    debug_printf("");
     //Unblock updater thread.
     OS_SendMessage(&msgQ, (OSMessage)arg, OS_MESSAGE_NOBLOCK);
 }
@@ -441,6 +451,7 @@ static void SoundAlarmHandler(void* arg)
 //Setups the music channels, timers and sound alarm.
 static void setup(void)
 {
+    debug_printf("");
     if (sInfo.playRate <= 0) sInfo.playRate = 32000; // Emergency default
 
     //Calculate timer values.
@@ -498,6 +509,7 @@ static void setup(void)
 //Reloads the current timers to apply new settings.
 static void reloadTimers(void)
 {
+    debug_printf("");
     BOOL notPaused = !sInfo.isPaused;
     if (notPaused)
         NWAVPlayer_setPaused(TRUE);
@@ -512,6 +524,7 @@ fx32 NWAVPlayer_getSpeed(void) { return sInfo.speed; }
 //Sets the music speed.
 void NWAVPlayer_setSpeed(fx32 speed)
 {
+    debug_printf("");
     //Set the music speed.
     sInfo.playRate = (hInfo.sampleRate * speed) >> FX32_SHIFT;
     sInfo.speed = speed;
@@ -549,6 +562,7 @@ static void loadEvents(void)
 //Plays the music.
 void NWAVPlayer_play(int fileID)
 {
+    debug_printf("");
     if(strmThread == NULL)
 	{
         strmThreadStack = (u8*)NWAV_ALLOC(THREAD_STACK_SIZE);
@@ -660,6 +674,7 @@ void NWAVPlayer_play(int fileID)
 //The OS thread that runs the updater.
 static void StrmThread(void* arg)
 {
+    debug_printf("");
     (void)arg;
     OSMessage message;
 
@@ -675,6 +690,7 @@ static void StrmThread(void* arg)
 //Initializes the NWAV player.
 void NWAVPlayer_init(void)
 {
+    debug_printf("");
 	sInfo.isPlaying = FALSE;
     sInfo.isPaused = TRUE;
     sInfo.speed = 0x1000;
