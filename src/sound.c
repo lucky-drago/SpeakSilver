@@ -88,7 +88,7 @@ void LONG_CALL NNS_SndPlayerStopSeqByPlayerNo_Hook(u8 playerID, int fadeFrame)
         current_seq = 0xFFFF;
         current_is_nwav = FALSE;
     }
-}
+}//Something in this one is qausin the brick
 
 
 static BOOL GetIfSequenced(int seqID)
@@ -266,7 +266,6 @@ const u8 *NNS_SND_ARC_LOAD_ERROR_STRINGS[] =
 
 int LONG_CALL NNSi_SndArcLoadBank(int bankNo, u32 loadFlag, void *heap, BOOL bSetAddr, struct SNDBankData** pData)
 {
-    debug_printf("");
     const NNSSndArcBankInfo* bankInfo;
     const NNSSndArcWaveArcInfo* waveArcInfo;
     SNDBankData* bank = NULL;

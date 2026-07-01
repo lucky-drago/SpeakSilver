@@ -21,7 +21,7 @@
     { .tag = NEW_NPC_TAG_START + num, .gfx = NEW_NPC_GFX_START + num, .callback_params = 0 },
 
 // adjust this depending on the amount of new npc's that you have added
-#define MON_OVERWORLD_GFX_START (297)
+#define MON_OVERWORLD_GFX_START (344)
 
 #define MON_FOLLOWER_ENTRY(species, cbparams) \
     { .tag = MON_OVERWORLD_TAG_START + species, .gfx = MON_OVERWORLD_GFX_START + species, .callback_params = cbparams },
