@@ -14,12 +14,13 @@
  */
 
 // this should stay the same
-#define NEW_NPC_GFX_START (297)
-#define NEW_NPC_TAG_START (7000)
+#define NEW_NPC_GFX_START (427)
+#define NEW_NPC_TAG_START (207)
 
 #define NEW_NPC_ENTRY(num) \
     { .tag = NEW_NPC_TAG_START + num, .gfx = NEW_NPC_GFX_START + num, .callback_params = 0 },
-
+#define NEW_BALL_ENTRY(num) \
+    { .tag = NEW_NPC_TAG_START + num, .gfx = NEW_NPC_GFX_START + num, .callback_params = 0x0420 },
 // adjust this depending on the amount of new npc's that you have added
 #define MON_OVERWORLD_GFX_START (344)
 
@@ -307,6 +308,21 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
         { .tag = 425, .gfx = 210, .callback_params = 0x45A5 },
         { .tag = 426, .gfx = 211, .callback_params = 0x49A5 },
         { .tag = 427, .gfx = 212, .callback_params = 0x0000 },
+        { .tag = 428, .gfx = 297, .callback_params = 0x0420 },
+        { .tag = 429, .gfx = 298, .callback_params = 0x0420 },
+        { .tag = 430, .gfx = 299, .callback_params = 0x0420 },
+        { .tag = 431, .gfx = 300, .callback_params = 0x0420 },
+        { .tag = 432, .gfx = 301, .callback_params = 0x45A5 },
+        { .tag = 433, .gfx = 302, .callback_params = 0x40A0 },
+        { .tag = 434, .gfx = 303, .callback_params = 0x40A0 },
+        { .tag = 435, .gfx = 304, .callback_params = 0x40A0 },
+        { .tag = 436, .gfx = 305, .callback_params = 0x40A0 },
+        { .tag = 437, .gfx = 306, .callback_params = 0x40A0 },
+        { .tag = 438, .gfx = 307, .callback_params = 0x40A0 },
+        { .tag = 439, .gfx = 308, .callback_params = 0x40A0 },
+        { .tag = 430, .gfx = 309, .callback_params = 0x40A0 },
+        { .tag = 441, .gfx = 310, .callback_params = 0x40A0 },
+        { .tag = 442, .gfx = 311, .callback_params = 0x40A0 },
 
         // npc mons
 
