@@ -22,7 +22,7 @@
 #define NEW_BALL_ENTRY(num) \
     { .tag = NEW_NPC_TAG_START + num, .gfx = NEW_NPC_GFX_START + num, .callback_params = 0x0420 },
 // adjust this depending on the amount of new npc's that you have added
-#define MON_OVERWORLD_GFX_START (344)
+#define MON_OVERWORLD_GFX_START (312)
 
 #define MON_FOLLOWER_ENTRY(species, cbparams) \
     { .tag = MON_OVERWORLD_TAG_START + species, .gfx = MON_OVERWORLD_GFX_START + species, .callback_params = cbparams },
@@ -320,7 +320,7 @@ struct OVERWORLD_TAG gOWTagToFileNum[] = // skip down a bit to see the parts tha
         { .tag = 437, .gfx = 306, .callback_params = 0x40A0 },
         { .tag = 438, .gfx = 307, .callback_params = 0x40A0 },
         { .tag = 439, .gfx = 308, .callback_params = 0x40A0 },
-        { .tag = 430, .gfx = 309, .callback_params = 0x40A0 },
+        { .tag = 440, .gfx = 309, .callback_params = 0x40A0 },
         { .tag = 441, .gfx = 310, .callback_params = 0x40A0 },
         { .tag = 442, .gfx = 311, .callback_params = 0x40A0 },
 
