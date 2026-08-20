@@ -443,7 +443,6 @@ static void update(StreamInfo* sInfo)
 //The sound alarm function that unblocks the thread.
 static void SoundAlarmHandler(void* arg)
 {
-    debug_printf("");
     //Unblock updater thread.
     OS_SendMessage(&msgQ, (OSMessage)arg, OS_MESSAGE_NOBLOCK);
 }
@@ -674,7 +673,6 @@ void NWAVPlayer_play(int fileID)
 //The OS thread that runs the updater.
 static void StrmThread(void* arg)
 {
-    debug_printf("");
     (void)arg;
     OSMessage message;
 

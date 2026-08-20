@@ -62,7 +62,7 @@ u16 MainMusicComboTable[][2] =
     [ANIM_MUSIC_COMBO_PALKIA] = {0x23, 3},
     [ANIM_MUSIC_COMBO_GIRATINA] = {0x22, 4},
     [ANIM_MUSIC_COMBO_LAKE_TRIO] = {0x22, 10},
-    [ANIM_MUSIC_COMBO_ARCEUS] = {0x22, 0},
+    [ANIM_MUSIC_COMBO_ARCEUS] = {0x22, SEQ_GS_E_ARCEUS},
     [ANIM_MUSIC_COMBO_SWORDS] = {0x22, 8},
     [ANIM_MUSIC_COMBO_RESHIRAM] = {0x23, 2},
     [ANIM_MUSIC_COMBO_ZEKROM] = {0x24, 2},
@@ -72,6 +72,7 @@ u16 MainMusicComboTable[][2] =
     [ANIM_MUSIC_COMBO_NECROZMA] = {0x22, 6},
     [ANIM_MUSIC_COMBO_AVE_MYTHICAL] = {0x22, 5},
     [ANIM_MUSIC_COMBO_SMALL_MYTHICAL] = {0x22, 11}, //mew's theme emerald
+    [ANIM_MUSIC_COMBO_PARADOX] = {0x22, 16}, //mew's theme emerald
 };
 
 // format is one byte for trainer class, then one byte for combo (combo increments by 4 because each combo is four bytes long)
@@ -169,7 +170,7 @@ struct MonBattleMusic PokemonBattleMusic[] =
     {.species = SPECIES_VICTINI,    .combo = ANIM_MUSIC_COMBO_VICTINI},
     {.species = SPECIES_KELDEO,     .combo = ANIM_MUSIC_COMBO_SWORDS},
     {.species = SPECIES_MELOETTA,   .combo = ANIM_MUSIC_COMBO_LAKE_TRIO},
-    {.species = SPECIES_GENESECT,   .combo = ANIM_MUSIC_COMBO_AVE_MYTHICAL},
+    {.species = SPECIES_GENESECT,   .combo = ANIM_MUSIC_COMBO_PARADOX},
     {.species = SPECIES_DIANCIE,    .combo = ANIM_MUSIC_COMBO_LAKE_TRIO},
     {.species = SPECIES_HOOPA,      .combo = ANIM_MUSIC_COMBO_LAKE_TRIO},
     {.species = SPECIES_VOLCANION,  .combo = ANIM_MUSIC_COMBO_SWORDS},
@@ -177,6 +178,29 @@ struct MonBattleMusic PokemonBattleMusic[] =
     {.species = SPECIES_MARSHADOW,  .combo = ANIM_MUSIC_COMBO_AVE_MYTHICAL},
     {.species = SPECIES_ZERAORA,    .combo = ANIM_MUSIC_COMBO_AVE_MYTHICAL},
     {.species = SPECIES_ZARUDE,     .combo = ANIM_MUSIC_COMBO_AVE_MYTHICAL},
+    //Start Paradox
+    {.species = SPECIES_GREAT_TUSK,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_SCREAM_TAIL,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_BRUTE_BONNET,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_FLUTTER_MANE,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_SLITHER_WING,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_SANDY_SHOCKS,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_ROARING_MOON,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_WALKING_WAKE,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_RAGING_BOLT,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_GOUGING_FIRE,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_TREADS,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_BUNDLE,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_HANDS,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_JUGULIS,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_MOTH,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_THORNS,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_VALIANT,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_LEAVES,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_CROWN,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_IRON_BOULDER,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_KORAIDON,  .combo = ANIM_MUSIC_COMBO_SWORDS},
+    {.species = SPECIES_MIRAIDON,  .combo = ANIM_MUSIC_COMBO_SWORDS},
 };
 
 struct TrainerMusic
