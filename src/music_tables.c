@@ -68,11 +68,11 @@ u16 MainMusicComboTable[][2] =
     [ANIM_MUSIC_COMBO_ZEKROM] = {0x24, 2},
     [ANIM_MUSIC_COMBO_KYUREM] = {0x22, 2},
     [ANIM_MUSIC_COMBO_VICTINI] = {0x23, SEQ_GS_BA_BRAIN},
-    [ANIM_MUSIC_COMBO_XYZ] {0x22, 9},
+    [ANIM_MUSIC_COMBO_XYZ] = {0x22, 9},
     [ANIM_MUSIC_COMBO_NECROZMA] = {0x22, 6},
     [ANIM_MUSIC_COMBO_AVE_MYTHICAL] = {0x22, 5},
     [ANIM_MUSIC_COMBO_SMALL_MYTHICAL] = {0x22, 11}, //mew's theme emerald
-    [ANIM_MUSIC_COMBO_PARADOX] = {0x22, 16}, //mew's theme emerald
+    [ANIM_MUSIC_COMBO_PARADOX] = {0x22, 0}, //mew's theme emerald
 };
 
 // format is one byte for trainer class, then one byte for combo (combo increments by 4 because each combo is four bytes long)
@@ -179,7 +179,7 @@ struct MonBattleMusic PokemonBattleMusic[] =
     {.species = SPECIES_ZERAORA,    .combo = ANIM_MUSIC_COMBO_AVE_MYTHICAL},
     {.species = SPECIES_ZARUDE,     .combo = ANIM_MUSIC_COMBO_AVE_MYTHICAL},
     //Start Paradox
-    {.species = SPECIES_GREAT_TUSK,   .combo = ANIM_MUSIC_COMBO_PARADOX},
+    {.species = SPECIES_DUNSPARCE,   .combo = ANIM_MUSIC_COMBO_SUICUNE},
     {.species = SPECIES_SCREAM_TAIL,   .combo = ANIM_MUSIC_COMBO_PARADOX},
     {.species = SPECIES_BRUTE_BONNET,   .combo = ANIM_MUSIC_COMBO_PARADOX},
     {.species = SPECIES_FLUTTER_MANE,   .combo = ANIM_MUSIC_COMBO_PARADOX},

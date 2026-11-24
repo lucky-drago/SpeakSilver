@@ -876,6 +876,13 @@ Roamers_GetRoamMonStats = 0x0202DA54 | 1;
 Roamer_GetLocation = 0x0202D9F8 | 1;
 ApplyRoamerLocation = 0x02067914 | 1;
 
+Casino_AllocAtEnd = 0x0201AACC | 1;
+Casino_GetCoins = 0x02028EB4 | 1;
+Casino_GetOptions = 0x02028EA8 | 1;
+Casino_GetLuck = 0x02202378 | 1;
+Casino_LaunchVoltorbFlip = 0x0203FA38 | 1;
+Casino_LaunchApplication = 0x0203DFB4 | 1;
+Casino_SetupNativeScript = 0x0203FD58 | 1;
 
 /*Streamed Audio*/
 /* implies arm function, 4 byte instructions no need for | 1*/

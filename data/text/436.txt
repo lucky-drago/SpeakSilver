@@ -1,0 +1,11 @@
+Are you sure you want to\nquit playing?
+You have 50,000 Coins.\nYou can’t collect any more.
+You don’t have 3 Coins.\nYou cannot play right now.
+You have no coins.\nYou cannot play now.
+ COIN
+ SPIN
+ STOP
+{ALN_CENTER}Tap to insert 3 Coins.
+{ALN_CENTER}Tap to spin the reels.
+{ALN_CENTER}Tap to stop a reel.
+{ALN_CENTER}Tap to insert 1 Coin.

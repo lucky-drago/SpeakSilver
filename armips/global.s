@@ -19,7 +19,6 @@
 .include "armips/asm/pokedex.s" // code for pokedex expansion, including expanding the save
 .include "armips/asm/overworlds.s" // code for overworlds, specifically repointing gOWTagToFileNum and making dimorphism a byte instead of a halfword.
 
-
 .include "armips/asm/no_partner_double_battles.s" // allows no partner double battles
 
 .if FAIRY_TYPE_IMPLEMENTED == 1
@@ -42,3 +41,4 @@ armips/asm/trainer_ai.s - ~0x60 bytes of extra code
 
 plus all the c injection stuff.  we are not worried about that here, that is dynamically managed
 */
+.include "armips/asm/slot_machines.s" // Game Corner slots in application overlay 77
