@@ -3,8 +3,8 @@
 #include "../../battle_tests.h"
 BEGIN_TEST
 {
-    .battleType = BATTLE_TYPE_DOUBLE,
-    .weather = WEATHER_NONE,
+    .battleType = BATTLE_TYPE_DOUBLES,
+    .weather = FIELD_CONDITION_NONE,
     .fieldCondition = 0,
     .terrain = TERRAIN_NONE,
 
@@ -112,7 +112,7 @@ BEGIN_TEST
 
     .expectations = {
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "Grass grew to cover the battlefield!" },
-        { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "IronBundle used the Booster Energy to activate Quark Drive!" },
+        { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "IronBundle used its Booster Energy to activate its Quark Drive!" },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "IronBundle's Speed was heightened!" },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "IronBundle's Attack fell!" },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "Rillaboom's Attack fell!" },

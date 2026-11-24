@@ -1,8 +1,8 @@
 // Test: Quark Drive will activate with Booster Energy instead of Electric Terrain, if the other Terrain setter goes first.
 // Variation of https://bsky.app/profile/nerdofnow.bsky.social/post/3lg3xoq5ye22f
 {
-    .battleType = BATTLE_TYPE_DOUBLE,
-    .weather = WEATHER_NONE,
+    .battleType = BATTLE_TYPE_DOUBLES,
+    .weather = FIELD_CONDITION_NONE,
     .fieldCondition = 0,
     .terrain = TERRAIN_NONE,
 
@@ -116,7 +116,7 @@
 
     .expectations = {
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "Mist swirled about the battlefield!" },
-        { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "IronBundle used the Booster Energy to activate Quark Drive!" },
+        { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "IronBundle used its Booster Energy to activate its Quark Drive!" },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "IronBundle's Speed was heightened!" },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "An electric current ran across the battlefield!" },
     }

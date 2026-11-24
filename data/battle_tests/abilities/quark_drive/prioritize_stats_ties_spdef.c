@@ -1,8 +1,8 @@
 // Test: Protosynthesis prioritizes stats in the case of a tie in the following order: Attack, Defense, Sp. Attack, Sp. Defense, Speed - Sp. Defense case
 // Ninetales has 96 Atk, 95 Def, 101 Sp. Atk, 120 Sp. Def, 120 Speed
 {
-    .battleType = BATTLE_TYPE_SINGLE,
-    .weather = WEATHER_NONE,
+    .battleType = BATTLE_TYPE_TRAINER,
+    .weather = FIELD_CONDITION_NONE,
     .fieldCondition = 0,
     .terrain = TERRAIN_NONE,
 
@@ -93,7 +93,7 @@
     },
 
     .expectations = {
-        { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "Ninetales used the Booster Energy to activate Quark Drive!" },
+        { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "Ninetales used its Booster Energy to activate its Quark Drive!" },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "Ninetales's Sp. Def was heightened!" },
         { .expectationType = EXPECTATION_TYPE_HP_BAR, .battlerIDOrPartySlot = BATTLER_PLAYER_FIRST, .expectationValue.hpTaken = { 25, 25, 25, 26, 26, 27, 27, 27, 27, 27, 28, 28, 28, 29, 29, 30 } },
         { .expectationType = EXPECTATION_TYPE_HP_BAR, .battlerIDOrPartySlot = BATTLER_ENEMY_FIRST, .expectationValue.hpTaken = { 33, 33, 33, 33, 34, 34, 35, 35, 36, 36, 36, 36, 37, 37, 38, 39 } },

@@ -1,10 +1,10 @@
-// Test: Sludge Wave - Chain Kills in Doubles, switch at beginning
+// Test: Sludge Wave - Chain KOs in Doubles, switch at beginning
 // SKIP
 #include "../../battle_tests.h"
 BEGIN_TEST
 {
-    .battleType = BATTLE_TYPE_DOUBLE,
-    .weather = WEATHER_NONE,
+    .battleType = BATTLE_TYPE_DOUBLES,
+    .weather = FIELD_CONDITION_NONE,
     .fieldCondition = 0,
     .terrain = TERRAIN_NONE,
     .playerParty = {

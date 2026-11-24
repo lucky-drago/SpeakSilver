@@ -1,9 +1,9 @@
-// Test: Pursuit - second pursuit not triggered if kill from first pursuit
+// Test: Pursuit - second pursuit not triggered if KO from first pursuit
 #include "../../battle_tests.h"
 BEGIN_TEST
 {
-    .battleType = BATTLE_TYPE_DOUBLE,
-    .weather = WEATHER_NONE,
+    .battleType = BATTLE_TYPE_DOUBLES,
+    .weather = FIELD_CONDITION_NONE,
     .fieldCondition = 0,
     .terrain = TERRAIN_NONE,
     .playerParty = {

@@ -43,20 +43,24 @@ GF_ASSERT_INTERNAL = 0x0202551C | 1;
 SetPokemonGet = 0x0202A434 |1;
 SetPokemonSee = 0x0202A36C |1;
 UpdatePokedexWithReceivedSpecies = 0x0202ECC0 | 1;
-ArchiveDataLoadMalloc = 0x02007524 | 1;
-ArchiveDataLoad = 0x02007509;
-ArchiveDataLoadMallocOfs = 0x0200757C | 1;
-NARC_ctor = 0x02007688 | 1;
-ArchiveDataLoadOfs = 0x02007560 | 1;
+AllocAndReadWholeNarcMemberByIdPair = 0x02007524 | 1;
+ReadWholeNarcMemberByIdPair = 0x02007509;
+AllocAndReadFromNarcMemberByIdPair = 0x0200757C | 1;
+NARC_New = 0x02007688 | 1;
+NARC_Delete = 0x0200770C | 1;
+ReadFromNarcMemberByIdPair = 0x02007560 | 1;
 /*sqrt = 0x0200048A | 1;*/
 
 /*Pokemon*/
 AllocMonZeroed = 0x0206DD2C | 1;
 ZeroMonData = 0x0206DCE4 |1;
+Save_MapObjects_Get = 0x0203B9D0 |1;
+GetFirstAliveMonInParty_CrashIfNone = 0x02054388 |1;
+MapObjectManager_RestoreFromSave = 0x0205E648 |1;
+SaveArray_Party_Get = 0x02074904 |1;
 PokeParaSet = 0x0206DE38 |1;
 PokeParaSetChr = 0x0206E108 |1;
 PokeParaSetSexChr = 0x0206E14C |1;
-GetMonSpriteCharAndPlttNarcIdsEx = 0x020701E4 |1;
 PokeCopyPPtoPP = 0x0207188C |1;
 GetMonData = 0x0206E540 |1;
 GetBoxMonData = 0x0206E640 |1;
@@ -150,6 +154,7 @@ CopyWindowToVram = 0x0201D578 |1;
 
 /*ItemUse*/
 SetUpItemScript = 0x02064A8C |1;
+sItemFieldUseFuncs = 0x020FE264;
 
 /*OAM*/
 OAM_LoadResourceCharArcH = 0x0200D504 | 1;
@@ -203,7 +208,6 @@ Snd_SePlay = 0x0200604C | 1;
 BattleDamageDivide = 0x02253178 | 1;
 BattleWorkWeatherGet = 0x0223BAF8 | 1;
 BattleWorkEnemyClientGet = 0x32F8 + 0x022378C1;
-TraceClientGet = 0x022585B8 | 1;
 IsClientEnemy = 0x0223AB1C | 1;
 TypeCalc = 0x02251D28 | 1;
 AnticipateMoveEffectListCheck = 0x0225865C | 1;
@@ -219,8 +223,10 @@ IsMovingAfterClient = 0x0225561C | 1;
 GetHeldItemFlingEffect = 0x022558D0 | 1;
 GetHeldItemFlingPower = 0x022558F8 | 1;
 GetHeldItemModifier = 0x02255844 | 1;
-GetNaturalGiftPower = 0x02255890 | 1;
-GetNaturalGiftType = 0x022558A4 | 1;
+CalculateTypeEffectiveness = 0x0225264C | 1;
+CanSwitchMon = 0x02252890 | 1;
+InitSwitchWork = 0x022510BC | 1;
+ov12_02256F78 = 0x02256F78 | 1;
 
 GetArceusType = 0x02071C28 | 1;
 BattleWorkBattleStatusFlagGet = 0x0223B514 | 1;
@@ -234,7 +240,7 @@ SCIO_QueueMoveAnimation = 0x0226340C | 1;
 SCIO_QueueMoveAnimationConsiderAttackerDefender = 0x0226343C | 1;
 SkillSequenceGosub = 0x02245520 | 1;
 CheckIfAnyoneShouldFaint = 0x0224DC74 | 1;
-Snd_BgmPlay = 0x02005D48 | 1;
+PlayBGM = 0x02005D48 | 1;
 BattleWorkPinchSEFlagSet = 0x0223BD3C | 1;
 ST_ServerPokeOneSelfCheckActPP = 0x022568B0 | 1;
 PokeExpCalc = 0x022463E8 | 1;
@@ -291,6 +297,7 @@ BattleWorkCommStandNoGet = 0x0223BFCC | 1;
 /*Overworld Code*/
 AddPokemonParam = 0x0224855C | 1;
 GetEncountChar = 0x02247854 | 1;
+ObjectEvent_GetGraphicsInfo = 0x021F92DC | 1;
 /*get_mon_ow_tag = 0x02069D70 | 1;*/
 does_species_have_dimorphism = 0x0206A338 | 1;
 
@@ -454,7 +461,7 @@ GetBallID_ov7 = 0x0223251C | 1;
 
 TypeCheckCalc = 0x022583B4 | 1;
 ShouldDelayTurnEffectivenessChecking = 0x02258440 | 1;
-ShouldUseNormalTypeEffCalc = 0x02251C74 | 1;
+
 AI_TypeCheckCalc = 0x022521C8 | 1;
 AI_ShouldUseNormalTypeEffCalc = 0x02252178 | 1;
 
@@ -680,6 +687,7 @@ AddWindow = 0x0201D4F8 | 1;
 
 ov12_0224DD18 = 0x0224DD18 | 1;
 ov12_0224D7EC = 0x0224D7EC | 1;
+BattleSystem_GetBattleStyle = 0x0223B740 | 1;
 ov12_0224E130 = 0x0224E130 | 1;
 ov12_0224DC0C = 0x0224DC0C | 1;
 SortExecutionOrderBySpeed = 0x02257EC0 | 1;
@@ -736,14 +744,33 @@ BattleControllerPlayer_RunInput = 0x0224AC94 | 1;
 BattleController_EmitHealthbarUpdate = 0x02263488 | 1;
 BattleController_EmitMonFlicker = 0x0226346C | 1;
 BattleMon_GetMoveIndex = 0x02251C60 | 1;
+IsMoveEncored = 0x02257DFC | 1;
+Battler_CanSelectAction = 0x022567A0 | 1;
+ov12_02261264 = 0x02261264 | 1;
+BattleController_EmitSetCommandSelectionMenu = 0x02262B80 | 1;
+BattleController_EmitStopGaugeAnimation = 0x02263CCC | 1;
+BattleController_EmitShowMoveSelectMenu = 0x02262F40 | 1;
+ov12_0223BFFC = 0x0223BFFC | 1;
+BattleController_TryEmitExitRecording = 0x022581BC | 1;
+ov12_0224DB64 = 0x0224DB64 | 1;
+BattleCommand_EmitShowTargetSelectMenu = 0x02262FFC | 1;
+BattleController_EmitShowBagMenu = 0x02263138 | 1;
+BattlerCanSwitch = 0x02255920 | 1;
+ov12_0223AB0C = 0x0223AB0C | 1;
+BattleController_EmitShowYesNoMenu = 0x0226337C | 1;
+BattleBuffer_Clear = 0x0224EDC0 | 1;
+BattleController_EmitClearTouchScreen = 0x02263E18 | 1;
+BattleController_EmitClearMessageBox = 0x022642F0 | 1;
+ov12_0224E414 = 0x0224E414 | 1;
+ov12_02237ED0 = 0x02237ED0 | 1;
 CheckTruant = 0x02252C40 | 1;
 CopyBattleMonToPartyMon = 0x02250C40 | 1;
 LowestFlagNo = 0x020726E0 | 1;
 Battler_GetRandomOpposingBattlerId = 0x02253DA0 | 1;
 GetBattlerLearnedMoveCount = 0x02252EA8 | 1;
-CanSwitchMon = 0x02252890 | 1;
 BattleMon_AddVar = 0x0224F7AC | 1;
 GetFlavorPreferenceFromPID = 0x020718E8 | 1;
+HealthBox_DrawLevelText = 0x022652D0 | 1;
 
 ov12_02261258 = 0x02261258 | 1;
 //ov12_02252D14 = 0x02252D14 | 1;
@@ -757,7 +784,7 @@ BattleMessage_BufferType = 0x0223CE50 | 1;
 BattleMessage_BufferAbility = 0x0223CE5C | 1;
 BattleMessage_BufferStat = 0x0223CE68 | 1;
 BattleMessage_BufferStatus = 0x0223CE74 | 1;
-BattleMessage_BufferPokemon = 0x0223CE80 | 1;
+//BattleMessage_BufferPokemon = 0x0223CE80 | 1;
 BattleMessage_BufferPoffin = 0x0223CEA4 | 1;
 BattleMessage_BufferFlavorPreference = 0x0223CEA8 | 1;
 BattleMessage_BufferTrainerClass = 0x0223CEB4 | 1;
@@ -811,9 +838,15 @@ InitMartUI = 0x02256D34 | 1;
 
 sBattleBgProfileTable = 0x0226E70C;
 
-BattleSetup_New_Tutorial = 0x02051AAC | 1;
+BattleSetup_New = 0x020518D8 | 1;
+BattleSetup_InitFromFieldSystem = 0x02051F00 | 1;
+ov02_02247F30 = 0x02247F30 | 1;
 BattleSetup_GetWildTransitionEffect = 0x020517E8 | 1;
 BattleSetup_GetWildBattleMusic = 0x020517FC | 1;
+CallTask_StartEncounter = 0x0205085C | 1;
+SetupAndStartWildBattle = 0x02051020 | 1;
+
+BattleSetup_New_Tutorial = 0x02051AAC | 1;
 Encounter_New = 0x020506BC | 1;
 TaskManager_Call = 0x02050530 | 1;
 Task_TutorialBattle = 0x0205128C | 1;
@@ -863,10 +896,24 @@ PartyMenu_DisableMainScreenBlend_AfterYesNo = 0x0207CB90 | 1;
 sBattleBgProfileTable = 0x0226E70C;
 UpdateFriendshipFainted = 0x02248558 | 1;
 
+Save_GameStats_Get = 0x0202CF54 | 1;
+GameStats_Inc = 0x0202D0FC | 1;
+
 StringExpandPlaceholders = 0x0200CBBC | 1;
 ov12_02256694 = 0x02256694 | 1;
+BattleBuffer_GetNext = 0x0225682C | 1;
+BattleController_EmitShowMonList = 0x022632DC | 1;
+BattleController_EmitShowWaitMessage = 0x02263F30 | 1;
+ov12_0223BDDC = 0x0223BDDC | 1;
+BattleSystem_GetMaxBattlers = 0x0223A7F0 | 1;
+BattleSystem_GetFieldSide = 0x0223AB1C | 1;
+ov12_0223BB88 = 0x0223BB88 | 1;
+ov12_0223BB94 = 0x0223BB94 | 1;
+ov12_022600F0 = 0x022600F0 | 1;
+Pokepic_StartAnim = 0x02008550 | 1;
 sStarterChoiceCries = 0x021E7398;
 BufferBoxMonNickname = 0x0200BF8C | 1;
+BufferBoxMonSpeciesName = 0x0200BF1C | 1;
 
 #roamers
 PlayerLocationHistoryGetBack = 0x0202D9F4 | 1;
@@ -875,45 +922,3 @@ SetRoamerData = 0x0202DAB8 | 1;
 Roamers_GetRoamMonStats = 0x0202DA54 | 1;
 Roamer_GetLocation = 0x0202D9F8 | 1;
 ApplyRoamerLocation = 0x02067914 | 1;
-
-Casino_AllocAtEnd = 0x0201AACC | 1;
-Casino_GetCoins = 0x02028EB4 | 1;
-Casino_GetOptions = 0x02028EA8 | 1;
-Casino_GetLuck = 0x02202378 | 1;
-Casino_LaunchVoltorbFlip = 0x0203FA38 | 1;
-Casino_LaunchApplication = 0x0203DFB4 | 1;
-Casino_SetupNativeScript = 0x0203FD58 | 1;
-
-/*Streamed Audio*/
-/* implies arm function, 4 byte instructions no need for | 1*/
-/* If 2 byte instruction, then thumb mode, then need | 1. */
-/* Looks like they are all thumb functions */
-
-/*OS_Panic = ?, MI_CpuFill8 = ?*/
-OS_CreateThread = 0x020D1AD4;
-OS_WakeUpThreadDirect = 0x020D1F34;
-OS_InitMessageQueue = 0x020D2388;
-OS_SendMessage = 0x020D23B0;
-OS_ReceiveMessage = 0x020D2444;
-OS_Terminate = 0x020D3F48;
-
-SND_SetupChannelPcm = 0x020D52E8;
-SND_SetChannelVolume = 0x020D52A0;
-SND_LockChannel =   0x020D5240;
-SND_SetupAlarm =    0x020D5200; 
-SND_StartTimer =    0x020D5174;
-SND_StopTimer =     0x020D519C;
-
-NNS_SndSetMasterVolume = 0x020C7988;
-
-FS_InitFile =       0x020D7F98;
-FS_OpenFileFast =   0x020D8208;
-FS_ReadFile =       0x020D83CC;
-FS_SeekFile =       0x020D83DC;
-FS_CloseFile =      0x020D82C0;
-FS_FindArchive =    0x020D7958;
-
-DC_FlushRange =     0x020D2894;
-DC_InvalidateRange = 0x020D285C;
-
-MI_CpuFill8 =       0x020D4994;

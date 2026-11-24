@@ -1,4 +1,5 @@
-.include "asm/include/battle_commands.inc"
+#include "constants/battle_constants.h"
+.include "battle_commands.inc"
 
 .data
 
@@ -183,13 +184,13 @@ _AfterMessage:
     CallFromVar BSCRIPT_VAR_TEMP_DATA
 
 _AfterSynchronize:
-    TryCureStatusBerry BATTLER_CATEGORY_DEFENDER, _End
+    TryEatBerry BATTLER_CATEGORY_DEFENDER, HELD_ITEM_USE_REMOVE_CONDITION, _End
     CallFromVar BSCRIPT_VAR_TEMP_DATA
     End
 
 _CleanupSynchronize:
     UpdateVar OPCODE_FLAG_OFF, BSCRIPT_VAR_BATTLE_STATUS, BATTLE_STATUS_SYNCRONIZE
-    TryCureStatusBerry BATTLER_CATEGORY_SIDE_EFFECT_MON, _End
+    TryEatBerry BATTLER_CATEGORY_SIDE_EFFECT_MON, HELD_ITEM_USE_REMOVE_CONDITION, _End
     CallFromVar BSCRIPT_VAR_TEMP_DATA
 
 _End:

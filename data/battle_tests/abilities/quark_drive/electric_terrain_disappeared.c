@@ -1,7 +1,7 @@
 // Test: Quark Drive deactivates when Electric Terrain disappears
 {
-    .battleType = BATTLE_TYPE_SINGLE,
-    .weather = WEATHER_NONE,
+    .battleType = BATTLE_TYPE_TRAINER,
+    .weather = FIELD_CONDITION_NONE,
     .fieldCondition = 0,
     .terrain = TERRAIN_NONE,
 
@@ -93,7 +93,7 @@
 
     .expectations = {
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "An electric current ran across the battlefield!" },
-        { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "The Electric Terrain activated the opposing Iron Valor's Electric Surge!" },
+        { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "The Electric Terrain activated the opposing Iron Valor's Quark Drive!" },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "The opposing Iron Valor's Attack was heightened!" },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "The electricity disappeared from the battlefield." },
         { .expectationType = EXPECTATION_TYPE_MESSAGE, .expectationValue.message = "The effects of the opposing Iron Valor's Quark Drive wore off!" },

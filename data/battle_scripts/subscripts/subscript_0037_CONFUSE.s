@@ -1,4 +1,5 @@
-.include "asm/include/battle_commands.inc"
+#include "constants/battle_constants.h"
+.include "battle_commands.inc"
 
 .data
 
@@ -43,7 +44,7 @@ _076:
     WaitButtonABTime 30
 
 _094:
-    TryCureStatusBerry BATTLER_CATEGORY_SIDE_EFFECT_MON, _100
+    TryEatBerry BATTLER_CATEGORY_SIDE_EFFECT_MON, HELD_ITEM_USE_REMOVE_CONDITION, _100
     CallFromVar BSCRIPT_VAR_TEMP_DATA
 
 _100:

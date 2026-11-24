@@ -1,4 +1,4 @@
-// Test: Bestow - Invalid form-changing item (for user)
+// Test: Bestow - Invalid form-changing item (for target)
 #ifndef GET_TEST_CASE_ONLY
 
 #include "../../../../include/battle.h"
@@ -14,8 +14,8 @@ const struct TestBattleScenario BattleTests[] = {
 
 #endif
 
-    {   .battleType = BATTLE_TYPE_SINGLE,
-        .weather = WEATHER_NONE,
+    {   .battleType = BATTLE_TYPE_TRAINER,
+        .weather = FIELD_CONDITION_NONE,
         .fieldCondition = 0,
         .terrain = TERRAIN_NONE,
         .playerParty = {
